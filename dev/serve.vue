@@ -10,7 +10,6 @@ export default defineComponent({
   data() {
     return {
       // dna: "010101010101",
-      //list banaya
       name_list: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"],
       name:"zombie",
       shirt: 1
@@ -34,7 +33,13 @@ export default defineComponent({
     /> -->
     
     <br/><br/><br/>
-    <!-- < for loop jo list ko iterate karega harek mein zombie-char-component bana dega> -->
+    <zombie-char-component
+      :isZombieLoaded="true"
+      :optionalDna=null
+      :zombieName="name"
+      :autoGenerate="true"
+    />
+    <br/><br/><br/>
     <ul>
     <li v-for="index in 10" :key="index">
       <zombie-char-component
@@ -46,12 +51,6 @@ export default defineComponent({
     </li>
     </ul>
 
-    <zombie-char-component
-      :isZombieLoaded="true"
-      :optionalDna=null
-      :zombieName="'1'"
-      :autoGenerate="true"
-    />
     <!-- <zombie-char-component
       :isZombieLoaded="true"
       :optionalDna="dna"
