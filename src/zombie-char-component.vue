@@ -95,8 +95,13 @@ export default /*#__PURE__*/ defineComponent({
         const hash = sha3.keccak256(name);
         let num = bigInt(hash, 16);
         num = num.mod(Math.pow(10, 16));
+        console.log("hash = ", hash)
+        console.log(hash.length)
+        console.log("num = ", num)
         let dnaStr = String(num);
+        console.log("dnaStr = ", dnaStr)
         while (dnaStr.length < 16) dnaStr = "0" + dnaStr;
+        console.log("dnaStr = ", dnaStr)
         return dnaStr;
       }
     },
