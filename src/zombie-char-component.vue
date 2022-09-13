@@ -36,19 +36,7 @@ export default /*#__PURE__*/ defineComponent({
   data() {
     return {
       headImages: [head1, head2, head3, head4, head5, head6, head7],
-      eyeImages: [
-        eyes1,
-        eyes2,
-        eyes3,
-        eyes4,
-        eyes5,
-        eyes6,
-        eyes7,
-        eyes8,
-        eyes9,
-        eyes10,
-        eyes11,
-      ],
+      eyeImages: [eyes1,eyes2,eyes3,eyes4,eyes5,eyes6,eyes7,eyes8,eyes9,eyes10,eyes11,],
       shirtImages: [shirt1, shirt2, shirt3, shirt4, shirt5, shirt6],
     };
   },
