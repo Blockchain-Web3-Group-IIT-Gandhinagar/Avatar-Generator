@@ -33,6 +33,7 @@ export default defineComponent({
     /> -->
     
     <br/><br/><br/>
+    
     <div class="container-1">
       
 
@@ -55,6 +56,13 @@ export default defineComponent({
       
     </div>
 
+    <zombie-char-component
+      :isZombieLoaded="true"
+      :optionalDna=null
+      :zombieName="name"
+      :autoGenerate="true"
+    />
+    
     <br/><br/><br/>
     <ul class="container-2">
     <li v-for="index in 10" :key="index" class="container-2-">
@@ -72,12 +80,7 @@ export default defineComponent({
         </div>
       </div>
       
-      <!-- <zombie-char-component
-      :isZombieLoaded="true"
-      :optionalDna=null
-      :zombieName="name_list[index]"
-      :autoGenerate="true"
-    /> -->
+  
     </li>
     </ul>
 
