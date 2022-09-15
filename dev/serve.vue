@@ -12,8 +12,16 @@ export default defineComponent({
       // dna: "010101010101",
       name_list: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"],
       name:"zombie",
-      shirt: 1
+      shirt: 1,
+      submit_bool: false
     };
+  },
+  methods: {
+    addNewName() {
+      this.name_list.push(this.name);
+      this.submit_bool = true;
+      console.log(this.name_list);
+    }
   },
 });
 </script>
@@ -53,15 +61,20 @@ export default defineComponent({
       
       <input v-model = "name" />
       <button style="margin:10px;" type="button" class="btn btn-secondary">Submit</button>
+
+      <form v-on:submit.prevent="addNewName">
+      <input v-model="name" />
+      <button type="submit">Add Name</button>
+      </form>
       
     </div>
 
-    <zombie-char-component
+    <!-- <zombie-char-component
       :isZombieLoaded="true"
       :optionalDna=null
       :zombieName="name"
       :autoGenerate="true"
-    />
+    /> -->
     
     <br/><br/><br/>
     <ul class="container-2">
