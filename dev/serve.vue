@@ -38,7 +38,7 @@ export default defineComponent({
 
       <br/><br/><br/>
 
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 15rem;">
         
         <zombie-char-component class="card-img-top"
           :isZombieLoaded="true"
@@ -58,7 +58,7 @@ export default defineComponent({
     <br/><br/><br/>
     <ul class="container-2">
     <li v-for="index in 10" :key="index" class="container-2-">
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 15rem;">
         
         <zombie-char-component class="card-img-top"
           :isZombieLoaded="true"
@@ -66,7 +66,7 @@ export default defineComponent({
           :zombieName="name_list[10-index]"
           :autoGenerate="true"
         />
-        <div class="card-body">
+        <div class="card-body" style = "height: 3rem;">
           <h5 class="card-title">{{name_list[10-index]}}</h5>
           <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
         </div>
