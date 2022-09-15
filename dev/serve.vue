@@ -43,7 +43,7 @@ export default defineComponent({
         <zombie-char-component class="card-img-top"
           :isZombieLoaded="true"
           :optionalDna=null
-          :zombieName="name_list[index-1]"
+          :zombieName="name"
           :autoGenerate="true"
         />
       </div>
@@ -63,11 +63,11 @@ export default defineComponent({
         <zombie-char-component class="card-img-top"
           :isZombieLoaded="true"
           :optionalDna=null
-          :zombieName="name_list[index-1]"
+          :zombieName="name_list[10-index]"
           :autoGenerate="true"
         />
         <div class="card-body">
-          <h5 class="card-title">{{name_list[index-1]}}</h5>
+          <h5 class="card-title">{{name_list[10-index]}}</h5>
           <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
         </div>
       </div>
