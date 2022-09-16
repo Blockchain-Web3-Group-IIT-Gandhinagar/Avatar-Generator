@@ -10,10 +10,11 @@ export default defineComponent({
   data() {
     return {
       // dna: "010101010101",
-      name_list: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"],
+      name_list: JSON.parse(localStorage.getItem('names')),
       // len : this.name_list.length,
+      stored_list: [],
       name:"zombie",
-      size: 10,
+      size: JSON.parse(localStorage.getItem('size')),
       submit_bool: false
     };
   },
