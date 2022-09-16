@@ -14,7 +14,8 @@ export default defineComponent({
       // len : this.name_list.length,
       stored_list: [],
       name:"zombie",
-      size: JSON.parse(localStorage.getItem('size')),
+      size: JSON.parse(localStorage.getItem('list_size')),
+      size:10,
       submit_bool: false
     };
   },
@@ -24,7 +25,7 @@ export default defineComponent({
       this.size = this.size + 1;
       this.submit_bool = true;
       localStorage.setItem('names', JSON.stringify(this.name_list));
-      localStorage.setItem('size', this.size)
+      localStorage.setItem('list_size', this.size)
       console.log(this.name_list);
     }
   },
@@ -65,12 +66,12 @@ export default defineComponent({
       <br/><br/><br/>
       
       <input v-model = "name" />
-      <button style="margin:10px;" type="button" class="btn btn-secondary">Submit</button>
+      <button style="margin:10px;" type="button" class="btn btn-secondary" v-on:click="addNewName">Submit</button>
 
-      <form v-on:submit.prevent="addNewName">
+      <!-- <form v-on:submit.prevent="addNewName">
       <input v-model="name" />
-      <button type="submit">Add Name</button>
-      </form>
+      <button style="margin:10px;" type="button" class="btn btn-secondary">Submit</button>
+      </form> -->
       
     </div>
 
