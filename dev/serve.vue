@@ -15,7 +15,7 @@ export default defineComponent({
       stored_list: [],
       name:"zombie",
       size: JSON.parse(localStorage.getItem('list_size')),
-      size:10,
+      // size:10,
       submit_bool: false
     };
   },
