@@ -11,14 +11,16 @@ export default defineComponent({
     return {
       // dna: "010101010101",
       name_list: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"],
+      // len : this.name_list.length,
       name:"zombie",
-      shirt: 1,
+      size: 10,
       submit_bool: false
     };
   },
   methods: {
     addNewName() {
       this.name_list.push(this.name);
+      this.size = this.size + 1;
       this.submit_bool = true;
       console.log(this.name_list);
     }
@@ -78,17 +80,17 @@ export default defineComponent({
     
     <br/><br/><br/>
     <ul class="container-2">
-    <li v-for="index in 10" :key="index" class="container-2-">
+    <li v-for="index in size" :key="index" class="container-2-">
       <div class="card" style="width: 15rem;">
         
         <zombie-char-component class="card-img-top"
           :isZombieLoaded="true"
           :optionalDna=null
-          :zombieName="name_list[10-index]"
+          :zombieName="name_list[size - index]"
           :autoGenerate="true"
         />
         <div class="card-body" style = "height: 3rem;">
-          <h5 class="card-title">{{name_list[10-index]}}</h5>
+          <h5 class="card-title">{{name_list[size - index]}}</h5>
           <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
         </div>
       </div>
