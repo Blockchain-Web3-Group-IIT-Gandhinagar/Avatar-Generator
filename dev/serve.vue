@@ -22,6 +22,8 @@ export default defineComponent({
       this.name_list.push(this.name);
       this.size = this.size + 1;
       this.submit_bool = true;
+      localStorage.setItem('names', JSON.stringify(this.name_list));
+      localStorage.setItem('size', this.size)
       console.log(this.name_list);
     }
   },
