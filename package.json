@@ -1,9 +1,4 @@
 {
-  "name": "zombie-char-component",
-  "version": "1.0.7",
-  "private": false,
-  "license": "MIT",
-  "description": "Vue Component for Zombie Character",
   "main": "dist/zombie-char-component.ssr.js",
   "browser": "dist/zombie-char-component.esm.js",
   "module": "dist/zombie-char-component.esm.js",
