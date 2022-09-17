@@ -1,6 +1,7 @@
 <script>
 import { defineComponent } from "vue";
 import ZombieCharComponent from "@/zombie-char-component.vue";
+import scroll from "@/assets/scroll_arrow.png";
 
 export default defineComponent({
   name: "ServeDev",
@@ -16,7 +17,8 @@ export default defineComponent({
       name:"zombie",
       size: JSON.parse(localStorage.getItem('list_size')),
       // size:10,
-      submit_bool: false
+      submit_bool: false,
+      scrollImage: scroll,
     };
   },
   methods: {
@@ -68,7 +70,9 @@ export default defineComponent({
           />
         </div>
 
-        <br/><br/><br/>
+        <!-- <br/> -->
+        <!-- <br/> -->
+        <!-- <br/> -->
         
         <input v-model = "name" />
         <button style="margin:10px;" type="button" class="btn btn-secondary" v-on:click="addNewName">Submit</button>
@@ -77,7 +81,9 @@ export default defineComponent({
         <input v-model="name" />
         <button style="margin:10px;" type="button" class="btn btn-secondary">Submit</button>
         </form> -->
-        
+        <br/>
+        <!-- <br/> -->
+        <img class="arrow" src="../src/assets/scroll_arrow.png" style="max-width: 70px; max-height:auto;"/>
       </div>
 
       <!-- <zombie-char-component
@@ -127,10 +133,15 @@ export default defineComponent({
 
 <style>
 
+  template{
+    background-color: rgb(42, 54, 54);
+    /* display: table; */
+  }
+
   .contain {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    /* width: 100%; */
     background-color: rgb(42, 54, 54);
   }
 
@@ -145,19 +156,32 @@ export default defineComponent({
 
   .containers {
     display: flex;
-    flex-direction: row;
-    width: 100%;
+    flex-direction: column;
+    /* width: 100%; */
     /* background-color: rgb(42, 54, 54); */
   }
 
   .container-1 {
-    width: 300px;
+    /* width: 90%; */
     margin: 20px;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .arrow {
+            /* width:100%; */
+            /* height:100%; */
+            object-fit: cover;
+            animation: float 3s ease-out infinite;
+  }
+
+  @keyframes float {
+      50% {
+      transform: translate(0, 30px);
+      }
   }
 
   .container-2 {
