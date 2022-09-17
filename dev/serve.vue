@@ -34,6 +34,8 @@ export default defineComponent({
 
 <template>
   <div id="app" class="contain">
+    <!-- <h1>Create Your Zombie</h1> -->
+    
     <!-- <input v-model = "dna" /> -->
     
     <!-- <zombie-char-component :isZombieLoaded="false" /> -->
