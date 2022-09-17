@@ -33,9 +33,10 @@ export default defineComponent({
 </script>
 
 <template>
+  <!-- <h1 class="heading">Create Your Zombie</h1> -->
   <div id="app" class="contain">
     <!-- <h1>Create Your Zombie</h1> -->
-    
+
     <!-- <input v-model = "dna" /> -->
     
     <!-- <zombie-char-component :isZombieLoaded="false" /> -->
@@ -156,6 +157,12 @@ export default defineComponent({
   .container-2- {
     /* background-color: aquamarine; */
     margin: 5px;
+  }
+
+  h1 {
+    align-items: center;
+    background-color: rgb(42, 54, 54);
+    color: white;
   }
 
 </style>
