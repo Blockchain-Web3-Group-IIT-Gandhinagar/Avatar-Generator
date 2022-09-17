@@ -45,64 +45,66 @@ export default defineComponent({
       :eyeChoice="5"
       :clothesColorChoice="50"
     /> -->
-    
-    <br/><br/><br/>
-    
-    <div class="container-1">
-      
+    <h1 class="header">ZOMBIE GENERATOR</h1>
+    <br/>
 
-      <br/><br/><br/>
 
-      <div class="card" style="width: 15rem;">
+    <div class="containers">
+      <div class="container-1">
         
-        <zombie-char-component class="card-img-top"
-          :isZombieLoaded="true"
-          :optionalDna=null
-          :zombieName="name"
-          :autoGenerate="true"
-        />
-      </div>
 
-      <br/><br/><br/>
-      
-      <input v-model = "name" />
-      <button style="margin:10px;" type="button" class="btn btn-secondary" v-on:click="addNewName">Submit</button>
+        <br/><br/><br/>
 
-      <!-- <form v-on:submit.prevent="addNewName">
-      <input v-model="name" />
-      <button style="margin:10px;" type="button" class="btn btn-secondary">Submit</button>
-      </form> -->
-      
-    </div>
-
-    <!-- <zombie-char-component
-      :isZombieLoaded="true"
-      :optionalDna=null
-      :zombieName="name"
-      :autoGenerate="true"
-    /> -->
-    
-    <br/><br/><br/>
-    <ul class="container-2">
-    <li v-for="index in size" :key="index" class="container-2-">
-      <div class="card" style="width: 15rem;">
-        
-        <zombie-char-component class="card-img-top"
-          :isZombieLoaded="true"
-          :optionalDna=null
-          :zombieName="name_list[size - index]"
-          :autoGenerate="true"
-        />
-        <div class="card-body" style = "height: 3rem;">
-          <h5 class="card-title">{{name_list[size - index]}}</h5>
-          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+        <div class="card" style="width: 15rem;">
+          
+          <zombie-char-component class="card-img-top"
+            :isZombieLoaded="true"
+            :optionalDna=null
+            :zombieName="name"
+            :autoGenerate="true"
+          />
         </div>
-      </div>
-      
-  
-    </li>
-    </ul>
 
+        <br/><br/><br/>
+        
+        <input v-model = "name" />
+        <button style="margin:10px;" type="button" class="btn btn-secondary" v-on:click="addNewName">Submit</button>
+
+        <!-- <form v-on:submit.prevent="addNewName">
+        <input v-model="name" />
+        <button style="margin:10px;" type="button" class="btn btn-secondary">Submit</button>
+        </form> -->
+        
+      </div>
+
+      <!-- <zombie-char-component
+        :isZombieLoaded="true"
+        :optionalDna=null
+        :zombieName="name"
+        :autoGenerate="true"
+      /> -->
+      
+      <br/><br/><br/>
+      <ul class="container-2">
+      <li v-for="index in size" :key="index" class="container-2-">
+        <div class="card" style="width: 15rem;">
+          
+          <zombie-char-component class="card-img-top"
+            :isZombieLoaded="true"
+            :optionalDna=null
+            :zombieName="name_list[size - index]"
+            :autoGenerate="true"
+          />
+          <div class="card-body" style = "height: 3rem;">
+            <h5 class="card-title">{{name_list[size - index]}}</h5>
+            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+          </div>
+        </div>
+        
+    
+      </li>
+      </ul>
+    </div>
     <!-- <zombie-char-component
       :isZombieLoaded="true"
       :optionalDna="dna"
@@ -124,13 +126,29 @@ export default defineComponent({
 
   .contain {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     background-color: rgb(42, 54, 54);
   }
 
+  .header {
+    color: rgb(16, 181, 223);
+    text-align: center;
+    margin-top: 20px;
+    font-size: 60px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+  }
+
+  .containers {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* background-color: rgb(42, 54, 54); */
+  }
+
   .container-1 {
-    width: 30%;
+    width: 300px;
     margin: 20px;
     height: 100%;
     display: flex;
