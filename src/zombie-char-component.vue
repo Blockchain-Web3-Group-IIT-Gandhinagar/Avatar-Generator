@@ -11,6 +11,8 @@ import head4 from "./assets/zombieparts/head-4@2x.png";
 import head5 from "./assets/zombieparts/head-5@2x.png";
 import head6 from "./assets/zombieparts/head-6@2x.png";
 import head7 from "./assets/zombieparts/head-7@2x.png";
+import head8 from "./assets/zombieparts/head-8@2x.png";
+import head9 from "./assets/zombieparts/head-9@2x.png";
 
 import eyes1 from "./assets/zombieparts/eyes-1@2x.png";
 import eyes2 from "./assets/zombieparts/eyes-2@2x.png";
@@ -30,14 +32,16 @@ import shirt3 from "./assets/zombieparts/shirt-3@2x.png";
 import shirt4 from "./assets/zombieparts/shirt-4@2x.png";
 import shirt5 from "./assets/zombieparts/shirt-5@2x.png";
 import shirt6 from "./assets/zombieparts/shirt-6@2x.png";
+import shirt7 from "./assets/zombieparts/shirt-7@2x.png";
+import shirt8 from "./assets/zombieparts/shirt-8@2x.png";
 
 export default /*#__PURE__*/ defineComponent({
   name: "ZombieCharComponent", // vue component name
   data() {
     return {
-      headImages: [head1, head2, head3, head4, head5, head6, head7],
+      headImages: [head1, head2, head3, head4, head5, head6, head7, head8, head9],
       eyeImages: [eyes1,eyes2,eyes3,eyes4,eyes5,eyes6,eyes7,eyes8,eyes9,eyes10,eyes11,],
-      shirtImages: [shirt1, shirt2, shirt3, shirt4, shirt5, shirt6],
+      shirtImages: [shirt1, shirt2, shirt3, shirt4, shirt5, shirt6, shirt7, shirt8],
     };
   },
   props: {
@@ -107,7 +111,7 @@ export default /*#__PURE__*/ defineComponent({
     },
     currentHeadChoice() {
       return this.autoGenerate
-        ? (parseInt(this.currentDna.substring(0, 2)) % 7) + 1
+        ? (parseInt(this.currentDna.substring(0, 2)) % 9) + 1
         : this.headChoice;
     },
     currentEyeChoice() {
@@ -117,7 +121,7 @@ export default /*#__PURE__*/ defineComponent({
     },
     currentShirtChoice() {
       return this.autoGenerate
-        ? (parseInt(this.currentDna.substring(4, 6)) % 6) + 1
+        ? (parseInt(this.currentDna.substring(4, 6)) % 8) + 1
         : this.shirtChoice;
     },
     currentSkinColorChoice() {
@@ -257,7 +261,7 @@ export default /*#__PURE__*/ defineComponent({
       />
 
       <img
-        v-for="n in 6"
+        v-for="n in 8"
         :key="'shirt-img-' + n"
         :style="clothesColor"
         :class="shirtClass(n)"
@@ -293,7 +297,7 @@ export default /*#__PURE__*/ defineComponent({
       />
 
       <img
-        v-for="n in 7"
+        v-for="n in 9"
         :key="'head-img-' + n"
         :style="headColor"
         :class="headClass(n)"
