@@ -58,7 +58,7 @@ export default defineComponent({
       <div class="container-1">
         
 
-        <br/><br/><br/>
+        <br/><br/>
 
         <div class="card" style="width: 15rem;">
           
@@ -70,7 +70,7 @@ export default defineComponent({
           />
         </div>
 
-        <!-- <br/> -->
+        <br/>
         <!-- <br/> -->
         <!-- <br/> -->
         
@@ -83,7 +83,7 @@ export default defineComponent({
         </form> -->
         <br/>
         <!-- <br/> -->
-        <img class="arrow" src="../src/assets/scroll_arrow.png" style="max-width: 70px; max-height:auto;"/>
+        <!-- <img class="arrow" src="../src/assets/scroll_arrow.png" style="max-width: 70px; max-height:auto;"/> -->
       </div>
 
       <!-- <zombie-char-component
@@ -93,7 +93,7 @@ export default defineComponent({
         :autoGenerate="true"
       /> -->
       
-      <br/><br/><br/>
+      <br/>
       <ul class="container-2">
       <li v-for="index in size" :key="index" class="container-2-">
         <div class="card" style="width: 15rem;">
@@ -133,15 +133,14 @@ export default defineComponent({
 
 <style>
 
-  template{
-    background-color: rgb(42, 54, 54);
-    /* display: table; */
+  template {
+    background-color: #000000;
   }
 
   .contain {
     display: flex;
     flex-direction: column;
-    /* width: 100%; */
+    min-width: 100%;
     background-color: rgb(42, 54, 54);
   }
 
@@ -156,14 +155,14 @@ export default defineComponent({
 
   .containers {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     /* width: 100%; */
     /* background-color: rgb(42, 54, 54); */
   }
 
   .container-1 {
-    /* width: 90%; */
-    margin: 20px;
+    /* width: 30%; */
+    margin: 80px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -205,6 +204,12 @@ export default defineComponent({
     align-items: center;
     background-color: rgb(42, 54, 54);
     color: white;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
   }
 
 </style>
